@@ -4,18 +4,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% HEADER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,twoside,10pt]{report}
+\documentclass[a4paper,oneside,10pt]{report}
 % Alternative Optionen:
 %	Papiergröße: a4paper / a5paper / b5paper / letterpaper / legalpaper / executivepaper
 % Duplex: oneside / twoside
 % Grundlegende Fontgrößen: 10pt / 11pt / 12pt
-
+\usepackage{hyperref}
 
 %% Deutsche Anpassungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[ansinew]{inputenc}
 
+\usepackage{microtype}
 \usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
 
 
@@ -23,7 +24,7 @@
 \usepackage{graphicx} %%Zum Laden von Grafiken
 %\usepackage{subfig} %%Teilabbildungen in einer Abbildung
 %\usepackage{tikz} %%Vektorgrafiken aus LaTeX heraus erstellen
-
+\usepackage{lmodern}
 %% Beachten Sie:
 %% Die Einbindung einer Grafik erfolgt mit \includegraphics{Dateiname}
 %% bzw. über den Dialog im Einfügen-Menü.
@@ -69,6 +70,10 @@
 %\input{optionen} %Eine Datei 'optionen.tex' wird hierfür benötigt.
 %% ==> TeXnicCenter liefert mögliche Optionendateien
 %% ==> im Vorlagenarchiv mit (Datei | Neu von Vorlage...).
+\setlength{\marginparwidth}{1.2in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -98,10 +103,8 @@
 
 \pagestyle{plain} %%Ab hier die Kopf-/Fusszeilen: headings / fancy / ...
 
-\chapter{Geschichte}
-a.	Geschichte des Webs (Tim Berners-Lee etc)
-b.	Scheitern .com-bubble
-c.	Unternehmensgründungen Facebook/Twitter
+
+
 
 
 \chapter{Soziale Medien - was ist das?}
@@ -113,12 +116,63 @@ i.	als Unterkategorie der Medien
 ii.	Facebook/SchülerVZ/LinkedIn/Xing
 c.	Blogs
 
+Früher beschränkten sich alle erfolgreichen sozialen Netzwerke sich auf einzelne Teile der Gesellschaft (wie beispielsweise Match.com für Singles und SchülerVZ für Schüler). 
+Dieses Einrichten in einer ökonomischen ,Nische' erleichterte diesen Netzwerken das Überwinden der bereits angesprochenen kritischen Masse, die für eine hohe Durchdringung der Zielgruppe erforderlich ist.
+Davon ausgehend ist es umso erstaunlicher, dass die erst 2004 gegründete Plattform Facebook, die sich nur zu Beginn auf Harvard-Studenten beschränkte, nun das populärste und weitreichendste soziale Netzwerk ist. \marginpar{Ja toll aber warum hats geklappt?}
+
+
+
+kritische Masse
+Dieses Suchen einer ökonomischen ,Nische' erleichterte Ihnen eine hohe Durchdringung der angestrebten Zielgruppe. 
+
+
+\chapter{Geschichte}
+\section{Geschichte des Webs (Tim Berners-Lee etc)}
+
+\section{Scheitern .com-Bubble}
+Mit dem Platzen der .com-Bubble war es nicht absehbar, das in nächster Zeit.
+\marginpar{da fehlt die Hälfte}
+
+\section{andere soziale Netzwerke}
+
+\section{Unternehmensgründungen Facebook/Twitter}
+Doch dann kam Facebook zum Vorschein. Die Idee des damals 19-jährigen Mark Zuckerbergs, Harvard-Studenten ein Netzwerk zur sozialen Interaktion zur Verfügung zu stellen, war der Grundstein für die Entwicklung von Facebook, der heute meistbesuchtesten Internetseite der Welt.
+Mit über soundsoviel Benutzern ist damit ein soundso großer Teil der Welt bei Facebook registriert.
+Doch um sich die Tragweite Facebooks klar zu machen, müssen weitere Statistiken herangezogen werden
+\marginpar{Woher?}
+Die Nutzer von Facebook sind nicht nur quantitativ außerordentlich. 90\% der Benutzer besuchen die Seite täglich.
+Diese Zahl ist für eine Webseite utopisch. Selbst große Webseiten\marginpar{Welche?} können nur mit Besuchsfrequenzen von mehreren Tagen bis hin zu einer Woche aufwarten. Doch warum kehren Facebook-Benutzer so oft und so gerne wieder zurück?
+
+Die Antwort ist offensichtlich, aber doch nicht trivial. Der Sinn von Facebook ist es nicht, mit möglichst vielen Menschen oder Bekannten verbunden zu sein. Es geht um Kommunikation, man will sehen, was die Freunde gerade tun, was sie mögen, mit wem sie Pinnwandeinträge\marginpar{Das sollte erklärt werden} austauschen. Diese Form der Interaktion, die durchaus auch als weniger intensive bzw. passive Form des Stalkings bezeichnet werden kann, prägt den Umgang vieler Facebook-Nutzer untereinander. 
+Der Reiz der Informationen, die andere über sich preisgeben, ist deshalb weniger in den Informationen selber, die oft nur sekundär wichtig oder gar banal\marginpar{Beispiele} sind, zu finden, sondern vielmehr in der Tatsache, dass diese Informationen von Menschen stammen, die der Benutzer kennt. Dieses Faktum, das offensichtlich erscheinen mag, ist der Grundstein für die sehr hohe Besuchsfrequenz und die virale Verbreitung\marginpar{Erklärung} von Facebook unter Jugendlichen der heutigen Gesellschaft.
+
 
 
 \chapter{Der Wandel der Kommunikation}
-a.	‚Institutionalisierung' der sozialen Netzwerke
+\section{Verbreitung}
+\subsection{Nerds -> Jugendliche}
+Einfach wegen viral und so?
+
+\subsection{Jugendliche -> Wirtschaft}
+weil Zielgruppe
+
+\subsection{Wirtschaft -> Politik}
+
+\section{‚Institutionalisierung' der sozialen Netzwerke}
+Ein überraschendes Phänomen zeichnet sich in der momentanen gesellschaftlichen Situation ab.
+Mittlerweile weit verbreitete Plattformen wie Twitter und Facebook werden zusehends als Medien im traditionellen Sinne angesprochen. So werden als Quelle für Nachrichten immer häufiger Tweets\marginpar{Glossar!} oder Facebook-Kommentare herangezogen.
+Dies ist von Seiten der Medien unverantwortlich, weil wie auch bei einschlägigen Online-Enzyklopädien jeder einen derartigen Beitrag verfassen kann.
+Das eigentliche Paradoxon ist jedoch nicht die Akzeptanz dieser Netzwerke als Nachrichtenquelle, sondern die Tatsache, dass diese Pseudo-Nachrichtenquelle als gleichwertig gegenüber beispielsweise einer Zeitung angesehen wird. 
+So ist es mittlerweile natürlich noch nicht Gang und Gebe, aber doch in Einzelfällen möglich, dass über Twitter Regierungsinformationen exklusiv verbreitet werden. 
+Der Regierungssprecher Steffen Seibert beispielsweise twittert als @RegSprecher (http://twitter.com/regsprecher).
+%
+Ähnliche Ausmaße nahmen die Diskussionen um die Plagiatsvorwürfe gegen den ehemaligen Verteidigungsminister Karl-Theodor zu Guttenberg an. 
+Während die Erfassung und Bearbeitung verdächtiger Stellen der Doktorarbeit in einem öffentlich zugänglichen und von jedermann bearbeitbaren Wiki stattfanden (GuttenPlag), bildete sich ein großer Facebook-Zusammenschluss, der das Ende der ,Hetzjagd' auf den Politiker forderte.
+Von den traditionellen Medien wurden diese Proteste teilweise als eine wirklich stattfindende Demonstration angesehen und verfolgt. 
+So wurden einzelne Beiträge, die Mitglieder der im Rahmen der Pro-Guttenberg-Facebookgruppe verfassten, wie \emph{vox populi} (lat.\ ,Stimme des Volkes') behandelt, Aussagen von Demonstranten oder Passanten, die üblicherweise von Journalisten bei Demonstrationen oder anderen öffentlichen Veranstaltungen erfragt werden.
+
 i.	Netzwerke nicht als Produkt/Selbstzweck, sondern als Plattform
-ii.	Bsp: Stars/Firmenvertreter/http://twitter.com/\#!/regsprecher
+ii.	Bsp: Stars/Firmenvertreter/
 iii.	Anerkennung von bspw. Facebook als Medium (Guttenberg-Proteste, Likes wie Demonstrationen)
 b.	Twitter
 c.	‚Digital Natives' / ‚Digital Immigrants'
@@ -190,7 +244,6 @@ als wenn an der Stelle des \verb#\input#-Befehls direkt der Inhalt der Datei stü
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% LITERATUR UND ANDERE VERZEICHNISSE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -206,20 +259,22 @@ als wenn an der Stelle des \verb#\input#-Befehls direkt der Inhalt der Datei stü
 %\bibliography{literatur} %Eine Datei 'literatur.bib' wird hierfür benötigt.
 
 %% Abbildungsverzeichnis
-\clearpage
-\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-\listoffigures
+%\clearpage
+%\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+%\listoffigures
 
 %% Tabellenverzeichnis
-\clearpage
-\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
-\listoftables
+%\clearpage
+%\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+%\listoftables
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ANHÄNGE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
+
+
 %% ==> Schreiben Sie hier Ihren Text oder fügen Sie externe Dateien ein.
 
 %\input{Dateiname} %Eine Datei 'Dateiname.tex' wird hierfür benötigt.
