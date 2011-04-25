@@ -50,7 +50,6 @@ style=authoryear-ibid, autocite=footnote,
 
 %% Andere Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{a4wide} %%Kleinere Seitenränder = mehr Text pro Zeile.
-%\usepackage{fancyhdr} %%Fancy Kopf- und Fußzeilen
 %\usepackage{longtable} %%Für Tabellen, die eine Seite überschreiten
 
 
@@ -75,7 +74,6 @@ style=authoryear-ibid, autocite=footnote,
 \pagestyle{empty} %%Keine Kopf-/Fusszeilen auf den ersten Seiten.
 
 %% Deckblatt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Die einfache Version:
 \title{Twitter, Facebook \& Co. -- Wie soziale Medien die Kommunikation des 21. Jahrhunderts revolutionieren}
 \author{Jonas Schneider}
 %\date{} %%Wenn kommentiert, wird das aktuelle Datum verwendet.
@@ -88,8 +86,8 @@ style=authoryear-ibid, autocite=footnote,
 \pagestyle{headings} %%Ab hier die Kopf-/Fusszeilen
 
 
-
 \input{content}
+
 
 
 
@@ -97,21 +95,13 @@ style=authoryear-ibid, autocite=footnote,
 %% LITERATURVERZEICHNIS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
+\pagestyle{plain} %%Ab hier die Kopf-/Fusszeilen
 \addtocontents{toc}{\protect\vspace*{\baselineskip}} % Ein kleiner Abstand zu den Kapiteln im Inhaltsverzeichnis (toc)
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \nocite{*} %Auch nicht-zitierte BibTeX-Einträge werden angezeigt.
 
 \printbibliography 
 
-%% Abbildungsverzeichnis
-%\clearpage
-%\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-%\listoffigures
-
-%% Tabellenverzeichnis
-%\clearpage
-%\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
-%\listoftables
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
