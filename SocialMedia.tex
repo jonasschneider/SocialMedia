@@ -4,12 +4,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% HEADER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,oneside,10pt]{report}
+\documentclass[a4paper,oneside,11pt]{report}
 % Alternative Optionen:
 %	Papiergröße: a4paper / a5paper / b5paper / letterpaper / legalpaper / executivepaper
 % Duplex: oneside / twoside
 % Grundlegende Fontgrößen: 10pt / 11pt / 12pt
-
 
 
 %% Deutsche Anpassungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,6 +21,22 @@
 \usepackage{url}
 
 
+\makeatletter 
+\def\@makechapterhead#1{% 
+% \vspace*{50\p@}% 
+  {\parindent \z@ \raggedright \normalfont 
+    \ifnum \c@secnumdepth >\m@ne 
+        \huge\bfseries \@chapapp\space \thechapter 
+        \par\nobreak 
+        \vskip 20\p@ 
+    \fi 
+    \interlinepenalty\@M 
+    \Huge \bfseries #1\par\nobreak 
+    \vskip 40\p@ 
+  }} 
+\makeatother 
+
+
 \usepackage{microtype}
 %\usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
 %% Packages für Grafiken & Abbildungen %%%%%%%%%%%%%%%%%%%%%%
@@ -30,12 +45,14 @@
 %\usepackage{tikz} %%Vektorgrafiken aus LaTeX heraus erstellen
 \usepackage{lmodern}
 
-%\usepackage{hyperref}
+\usepackage{hyperref}
 
 \usepackage[ 
 style=authoryear-ibid, autocite=footnote, 
 ]{biblatex} 
 \bibliography{Literatur} 
+
+\setlength{\bibitemsep}{4mm}
 
 \renewcommand*{\mkbibnamelast}[1]{\textsc{#1}} 
 \defbibheading{bibliography}{% 
@@ -86,7 +103,7 @@ style=authoryear-ibid, autocite=footnote,
 \pagestyle{headings} %%Ab hier die Kopf-/Fusszeilen
 
 
-\input{content}
+\include{content}
 
 
 
