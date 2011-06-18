@@ -83,14 +83,19 @@ style=authoryear-ibid, autocite=footnote,
 {\raggedright\footnotesize #1}}
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% DOKUMENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\pagestyle{empty} %%Keine Kopf-/Fusszeilen auf den ersten Seiten.
+\pagestyle{empty} %%Keine Kopf-/Fusszeilen
 
 %% Deckblatt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\addtolength{\voffset}{-15pt}
+
 \title{Twitter, Facebook \& Co. -- Wie soziale Medien die Kommunikation des 21. Jahrhunderts revolutionieren}
 \author{Jonas Schneider}
 %\date{} %%Wenn kommentiert, wird das aktuelle Datum verwendet.
@@ -100,7 +105,24 @@ style=authoryear-ibid, autocite=footnote,
 \tableofcontents %Inhaltsverzeichnis
 \cleardoublepage %Das erste Kapitel soll auf einer ungeraden Seite beginnen.
 
-\pagestyle{headings} %%Ab hier die Kopf-/Fusszeilen
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LITERATURVERZEICHNIS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+
+\pagestyle{plain} %%Keine Kopf-/Fusszeilen
+
+\addtolength{\voffset}{15pt}
+\nocite{*} %Auch nicht-zitierte BibTeX-Einträge werden angezeigt.
+\printbibliography 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INHALT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 \include{content}
@@ -108,16 +130,7 @@ style=authoryear-ibid, autocite=footnote,
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% LITERATURVERZEICHNIS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
-\pagestyle{plain} %%Ab hier die Kopf-/Fusszeilen
-\addtocontents{toc}{\protect\vspace*{\baselineskip}} % Ein kleiner Abstand zu den Kapiteln im Inhaltsverzeichnis (toc)
-\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-\nocite{*} %Auch nicht-zitierte BibTeX-Einträge werden angezeigt.
 
-\printbibliography 
 
 
 
